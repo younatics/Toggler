@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Toggler'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'Easiest way to select a button and off other buttons'
 
   s.description      = <<-DESC
