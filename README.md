@@ -8,6 +8,7 @@
 ## Intoduction
 💡 don't further use `isSelected` to every button. use `Toggler` to simply control your buttons
 ![demo](Images/Toggler.gif)
+![demo](Images/Toggler2.gif)
 
 ## Requirements
 
@@ -29,6 +30,9 @@ github "younatics/Toggler"
 ```
 
 ## Usage
+
+
+
 
 ## Examples
 
