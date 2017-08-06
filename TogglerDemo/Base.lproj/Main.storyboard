@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TogglerDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,8 +21,138 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBz-Sr-sVZ" customClass="Button" customModule="TogglerDemo" customModuleProvider="target">
+                                <rect key="frame" x="16" y="20" width="68.5" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Eqw-bR-GvC"/>
+                                </constraints>
+                                <state key="normal" title="Normal">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qok-Rm-7qJ" customClass="Button" customModule="TogglerDemo" customModuleProvider="target">
+                                <rect key="frame" x="16" y="70" width="68.5" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="i48-Ln-Cxw"/>
+                                </constraints>
+                                <state key="normal" title="Normal">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylP-XJ-hfC" customClass="Button" customModule="TogglerDemo" customModuleProvider="target">
+                                <rect key="frame" x="153" y="70" width="69" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8jd-I3-kxu"/>
+                                </constraints>
+                                <state key="normal" title="Normal">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ycf-Ko-Ejo" customClass="Button" customModule="TogglerDemo" customModuleProvider="target">
+                                <rect key="frame" x="84.5" y="20" width="68.5" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ONG-VG-141"/>
+                                </constraints>
+                                <state key="normal" title="Normal">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MG1-Yy-0S4" customClass="Button" customModule="TogglerDemo" customModuleProvider="target">
+                                <rect key="frame" x="222" y="20" width="68.5" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="dk4-TY-cdd"/>
+                                </constraints>
+                                <state key="normal" title="Normal">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MmD-7T-6rH" customClass="Button" customModule="TogglerDemo" customModuleProvider="target">
+                                <rect key="frame" x="290.5" y="20" width="68.5" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="i59-Pw-4dJ"/>
+                                </constraints>
+                                <state key="normal" title="Normal">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFy-2N-gtc" customClass="Button" customModule="TogglerDemo" customModuleProvider="target">
+                                <rect key="frame" x="153" y="20" width="69" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Wtb-p8-oc4"/>
+                                </constraints>
+                                <state key="normal" title="Normal">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sUu-zL-u6S">
+                                <rect key="frame" x="222" y="70" width="70.5" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="2He-My-Mwe"/>
+                                </constraints>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="icD-tQ-jtK">
+                                <rect key="frame" x="290.5" y="70" width="70.5" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="Mgy-7l-VhM"/>
+                                </constraints>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8l-SL-3Ii" customClass="Button" customModule="TogglerDemo" customModuleProvider="target">
+                                <rect key="frame" x="84.5" y="70" width="68.5" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9v9-Uo-ZpE"/>
+                                </constraints>
+                                <state key="normal" title="Normal">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="d8l-SL-3Ii" firstAttribute="leading" secondItem="Qok-Rm-7qJ" secondAttribute="trailing" id="2hD-hl-seV"/>
+                            <constraint firstItem="MmD-7T-6rH" firstAttribute="width" secondItem="KBz-Sr-sVZ" secondAttribute="width" id="3a3-77-aUu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MmD-7T-6rH" secondAttribute="trailing" id="4Pk-zt-ShX"/>
+                            <constraint firstItem="VFy-2N-gtc" firstAttribute="leading" secondItem="Ycf-Ko-Ejo" secondAttribute="trailing" id="5b6-CR-x1M"/>
+                            <constraint firstItem="Qok-Rm-7qJ" firstAttribute="top" secondItem="KBz-Sr-sVZ" secondAttribute="bottom" id="5h8-wO-XMh"/>
+                            <constraint firstItem="KBz-Sr-sVZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="84h-B9-lrN"/>
+                            <constraint firstItem="sUu-zL-u6S" firstAttribute="width" secondItem="Qok-Rm-7qJ" secondAttribute="width" id="BoZ-da-WAQ"/>
+                            <constraint firstItem="ylP-XJ-hfC" firstAttribute="width" secondItem="Qok-Rm-7qJ" secondAttribute="width" id="Fuh-hJ-pyz"/>
+                            <constraint firstItem="VFy-2N-gtc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="I5a-fC-8P8"/>
+                            <constraint firstItem="sUu-zL-u6S" firstAttribute="top" secondItem="MmD-7T-6rH" secondAttribute="bottom" id="JzM-ai-KCI"/>
+                            <constraint firstItem="icD-tQ-jtK" firstAttribute="width" secondItem="Qok-Rm-7qJ" secondAttribute="width" id="KQo-T9-tlX"/>
+                            <constraint firstItem="Ycf-Ko-Ejo" firstAttribute="leading" secondItem="KBz-Sr-sVZ" secondAttribute="trailing" id="Ko9-au-RuH"/>
+                            <constraint firstItem="sUu-zL-u6S" firstAttribute="leading" secondItem="ylP-XJ-hfC" secondAttribute="trailing" id="Lmc-Cs-ucr"/>
+                            <constraint firstItem="MG1-Yy-0S4" firstAttribute="width" secondItem="KBz-Sr-sVZ" secondAttribute="width" id="OeE-z1-WZv"/>
+                            <constraint firstItem="MmD-7T-6rH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="R2b-Kd-RSA"/>
+                            <constraint firstItem="Ycf-Ko-Ejo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Rsd-PR-JpS"/>
+                            <constraint firstItem="Ycf-Ko-Ejo" firstAttribute="width" secondItem="KBz-Sr-sVZ" secondAttribute="width" id="UEH-cc-gj0"/>
+                            <constraint firstItem="icD-tQ-jtK" firstAttribute="leading" secondItem="sUu-zL-u6S" secondAttribute="trailing" id="WPB-OW-ELd"/>
+                            <constraint firstItem="MG1-Yy-0S4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="als-z8-r0H"/>
+                            <constraint firstItem="MG1-Yy-0S4" firstAttribute="leading" secondItem="VFy-2N-gtc" secondAttribute="trailing" id="cp8-t4-btu"/>
+                            <constraint firstItem="VFy-2N-gtc" firstAttribute="width" secondItem="KBz-Sr-sVZ" secondAttribute="width" id="dxS-1y-cQM"/>
+                            <constraint firstItem="ylP-XJ-hfC" firstAttribute="top" secondItem="VFy-2N-gtc" secondAttribute="bottom" id="e7O-vm-LhE"/>
+                            <constraint firstItem="Qok-Rm-7qJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="eaT-nM-jaZ"/>
+                            <constraint firstItem="ylP-XJ-hfC" firstAttribute="leading" secondItem="d8l-SL-3Ii" secondAttribute="trailing" id="fvX-wc-wLi"/>
+                            <constraint firstItem="d8l-SL-3Ii" firstAttribute="top" secondItem="VFy-2N-gtc" secondAttribute="bottom" id="gj5-WD-vef"/>
+                            <constraint firstItem="icD-tQ-jtK" firstAttribute="top" secondItem="MmD-7T-6rH" secondAttribute="bottom" id="hRD-mG-Twl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="icD-tQ-jtK" secondAttribute="trailing" id="ohF-sq-zM0"/>
+                            <constraint firstItem="KBz-Sr-sVZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="woJ-5x-4IQ"/>
+                            <constraint firstItem="d8l-SL-3Ii" firstAttribute="width" secondItem="Qok-Rm-7qJ" secondAttribute="width" id="xCs-1M-jsF"/>
+                            <constraint firstItem="MmD-7T-6rH" firstAttribute="leading" secondItem="MG1-Yy-0S4" secondAttribute="trailing" id="zZP-yE-zRE"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="button1" destination="KBz-Sr-sVZ" id="uuu-RY-kZ5"/>
+                        <outlet property="button10" destination="icD-tQ-jtK" id="vwI-2B-cd3"/>
+                        <outlet property="button2" destination="Ycf-Ko-Ejo" id="l1G-yb-CQF"/>
+                        <outlet property="button3" destination="VFy-2N-gtc" id="jB7-I9-yUU"/>
+                        <outlet property="button4" destination="MG1-Yy-0S4" id="y6m-S2-kAC"/>
+                        <outlet property="button5" destination="MmD-7T-6rH" id="irX-GN-aQV"/>
+                        <outlet property="button6" destination="Qok-Rm-7qJ" id="Y1M-zM-TMR"/>
+                        <outlet property="button7" destination="d8l-SL-3Ii" id="fbe-aO-EpJ"/>
+                        <outlet property="button8" destination="ylP-XJ-hfC" id="9ik-CH-Sxw"/>
+                        <outlet property="button9" destination="sUu-zL-u6S" id="JMY-eb-rN8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

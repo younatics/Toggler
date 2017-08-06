@@ -11,7 +11,7 @@ import Foundation
 open class Toggler: NSObject {
     var togglers = [Any]()
 
-    init(default index: Int, togglers: [Any]) {
+    public init(default index: Int, togglers: [Any]) {
         super.init()
         
         self.togglers = togglers
@@ -23,7 +23,15 @@ open class Toggler: NSObject {
     }
     
     open func add(toggle: Any) {
-        
+        self.togglers.append(toggle)
+    }
+    
+    open func remove(at index: Int) {
+        if index <= togglers.count {
+            self.togglers.remove(at: index)
+        } else {
+            fatalError("Index is out of array")
+        }
     }
     
     private func toggleControl(index: Int, togglers: [Any]) {
@@ -34,11 +42,17 @@ open class Toggler: NSObject {
     }
     
     private func toggleStatus(toggle: Any, on: Bool) {
-        if let _toggle = toggle as? UIControl {
+        if let _toggle = toggle as? UIButton {
             if on {
-                _toggle.isSelected = false
+                _toggle.isSelected = true
             } else {
                 _toggle.isSelected = false
+            }
+        } else if let _toggle = toggle as? UISwitch {
+            if on {
+                _toggle.setOn(true, animated: true)
+            } else {
+                _toggle.setOn(false, animated: true)
             }
         } else {
             fatalError("Not supported type")
