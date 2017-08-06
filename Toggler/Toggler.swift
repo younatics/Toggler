@@ -14,31 +14,34 @@ open class Toggler: NSObject {
     init(default index: Int, togglers: [Any]) {
         super.init()
         
+        self.togglers = togglers
+        toggleControl(index: index, togglers: togglers)
+    }
+    
+    open func on(index: Int) {
+        toggleControl(index: index, togglers: togglers)
+    }
+    
+    open func add(toggle: Any) {
+        
+    }
+    
+    private func toggleControl(index: Int, togglers: [Any]) {
         for toggle in togglers {
-            toggleOff(toggle: toggle)
+            toggleStatus(toggle: toggle, on: false)
         }
-        toggleOn(toggle: togglers[index])
+        toggleStatus(toggle: togglers[index], on: true)
     }
     
-    private func toggleOff(toggle: Any) {
-        if let _toggle = toggle as? UIButton {
-            _toggle.isSelected = false
-        } else if let _toggle = toggle as? UIControl {
-            _toggle.isSelected = false
+    private func toggleStatus(toggle: Any, on: Bool) {
+        if let _toggle = toggle as? UIControl {
+            if on {
+                _toggle.isSelected = false
+            } else {
+                _toggle.isSelected = false
+            }
         } else {
             fatalError("Not supported type")
         }
     }
-    
-    private func toggleOn(toggle: Any) {
-        if let _toggle = toggle as? UIButton {
-            _toggle.isSelected = true
-        } else if let _toggle = toggle as? UIControl {
-            _toggle.isSelected = true
-        } else {
-            fatalError("Not supported type")
-        }
-    }
-
-    
 }
