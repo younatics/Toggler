@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Toggler
 
 class ViewController: UIViewController {
 
