@@ -7,6 +7,23 @@
 //
 
 import Foundation
+import UIKit
+
+public protocol Togglable: class {
+    func selectedToggle(select: Bool)
+}
+
+extension UIButton: Togglable {
+    public func selectedToggle(select: Bool) {
+        self.isSelected = select
+    }
+}
+
+extension UISwitch: Togglable {
+    public func selectedToggle(select: Bool) {
+        self.setOn(select, animated: true)
+    }
+}
 
 open class Toggler: NSObject {
     var togglers = [Any]()
@@ -42,18 +59,8 @@ open class Toggler: NSObject {
     }
     
     private func toggleStatus(toggle: Any, on: Bool) {
-        if let _toggle = toggle as? UIButton {
-            if on {
-                _toggle.isSelected = true
-            } else {
-                _toggle.isSelected = false
-            }
-        } else if let _toggle = toggle as? UISwitch {
-            if on {
-                _toggle.setOn(true, animated: true)
-            } else {
-                _toggle.setOn(false, animated: true)
-            }
+        if let _toggle = toggle as? Togglable {
+            _toggle.selectedToggle(select: on)
         } else {
             fatalError("Not supported type")
         }
