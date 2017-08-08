@@ -29,85 +29,27 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         toggler = Toggler(default: 0, togglers: [button1, button2, button3, button4, button5])
-        
         button1.addTarget(self, action: #selector(buttonClicked(_:)), for: .touchUpInside)
-        button1.tag = 0
-        
         button2.addTarget(self, action: #selector(buttonClicked(_:)), for: .touchUpInside)
-        button2.tag = 1
-        
         button3.addTarget(self, action: #selector(buttonClicked(_:)), for: .touchUpInside)
-        button3.tag = 2
-
         button4.addTarget(self, action: #selector(buttonClicked(_:)), for: .touchUpInside)
-        button4.tag = 3
-
         button5.addTarget(self, action: #selector(buttonClicked(_:)), for: .touchUpInside)
-        button5.tag = 4
         
         toggler2 = Toggler(default: 0, togglers: [button6, button7, button8, button9, button10])
-        
         button6.addTarget(self, action: #selector(buttonClicked2(_:)), for: .touchUpInside)
-        button6.tag = 0
-
         button7.addTarget(self, action: #selector(buttonClicked2(_:)), for: .touchUpInside)
-        button7.tag = 1
-
         button8.addTarget(self, action: #selector(buttonClicked2(_:)), for: .touchUpInside)
-        button8.tag = 2
-        
         button9.addTarget(self, action: #selector(buttonClicked2(_:)), for: .touchUpInside)
-        button9.tag = 3
-
         button10.addTarget(self, action: #selector(buttonClicked2(_:)), for: .touchUpInside)
-        button10.tag = 4
-
     }
     
     func buttonClicked(_ sender: UIButton) {
-        toggler.on(index: sender.tag)
-
-//        switch sender.tag {
-//        case 0:
-//            button1.isSelected = true
-//            button2.isSelected = false
-//            button3.isSelected = false
-//            button4.isSelected = false
-//            button5.isSelected = false
-//        case 1:
-//            button1.isSelected = false
-//            button2.isSelected = true
-//            button3.isSelected = false
-//            button4.isSelected = false
-//            button5.isSelected = false
-//        case 2:
-//            button1.isSelected = false
-//            button2.isSelected = false
-//            button3.isSelected = true
-//            button4.isSelected = false
-//            button5.isSelected = false
-//        case 3:
-//            button1.isSelected = false
-//            button2.isSelected = false
-//            button3.isSelected = false
-//            button4.isSelected = true
-//            button5.isSelected = false
-//        case 4:
-//            button1.isSelected = false
-//            button2.isSelected = false
-//            button3.isSelected = false
-//            button4.isSelected = false
-//            button5.isSelected = true
-//
-//        default:
-//            break
-//        }
+        toggler.on(button: sender)
     }
 
     func buttonClicked2(_ sender: UIButton) {
-        toggler2.on(index: sender.tag)
+        toggler2.on(button: sender)
     }
-
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
