@@ -30,11 +30,11 @@ public struct Toggler {
     
     public init(default index: Int = 0, togglers: [Togglable]) {
         self.togglers = togglers
-        toggleControl(at: index, togglers: togglers)
+        toggleControl(toggle: togglers[index], togglers: togglers)
     }
     
-    public func on(index: Int) {
-        toggleControl(at: index, togglers: togglers)
+    public func on(toggle: Togglable) {
+        toggleControl(toggle: toggle, togglers: togglers)
     }
     
     public mutating func add(toggle: Togglable) {
@@ -48,9 +48,9 @@ public struct Toggler {
         togglers.remove(at: index)
     }
     
-    private func toggleControl(at index: Int, togglers: [Togglable]) {
+    private func toggleControl(toggle: Togglable, togglers: [Togglable]) {
         togglers.enumerated().forEach {
-            toggleStatus(toggle: $0.element, on: $0.offset == index)
+            toggleStatus(toggle: $0.element, on: $0.element === toggle)
         }
     }
     

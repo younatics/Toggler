@@ -11,10 +11,8 @@ import UIKit
 class Button: UIButton {
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        self.setTitle("Normal", for: .normal)
-        self.setTitle("Selected", for: .selected)
     }
+    
     override var isSelected: Bool {
         didSet {
             if isSelected {
@@ -26,10 +24,12 @@ class Button: UIButton {
     }
     
     func changed() {
+        self.setTitle("Selected", for: .normal)
         self.backgroundColor = UIColor.lightGray
     }
     
     func normal() {
+        self.setTitle("Normal", for: .normal)
         self.backgroundColor = UIColor.white
     }
 
