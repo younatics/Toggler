@@ -13,56 +13,48 @@ public protocol Togglable: class {
     func selectedToggle(select: Bool)
 }
 
-extension UIButton: Togglable {
+extension UIControl: Togglable {
     public func selectedToggle(select: Bool) {
-        self.isSelected = select
+        isSelected = select
     }
 }
 
-extension UISwitch: Togglable {
-    public func selectedToggle(select: Bool) {
-        self.setOn(select, animated: true)
+extension UISwitch {
+    public override func selectedToggle(select: Bool) {
+        setOn(select, animated: true)
     }
 }
 
-open class Toggler: NSObject {
-    var togglers = [Any]()
-
-    public init(default index: Int, togglers: [Any]) {
-        super.init()
-        
+public struct Toggler {
+    var togglers = [Togglable]()
+    
+    public init(default index: Int = 0, togglers: [Togglable]) {
         self.togglers = togglers
-        toggleControl(index: index, togglers: togglers)
+        toggleControl(at: index, togglers: togglers)
     }
     
-    open func on(index: Int) {
-        toggleControl(index: index, togglers: togglers)
+    public func on(index: Int) {
+        toggleControl(at: index, togglers: togglers)
     }
     
-    open func add(toggle: Any) {
-        self.togglers.append(toggle)
+    public mutating func add(toggle: Togglable) {
+        togglers.append(toggle)
     }
     
-    open func remove(at index: Int) {
-        if index <= togglers.count {
-            self.togglers.remove(at: index)
-        } else {
+    public mutating func remove(at index: Int) {
+        guard index < togglers.count else {
             fatalError("Index is out of array")
         }
+        togglers.remove(at: index)
     }
     
-    private func toggleControl(index: Int, togglers: [Any]) {
-        for toggle in togglers {
-            toggleStatus(toggle: toggle, on: false)
+    private func toggleControl(at index: Int, togglers: [Togglable]) {
+        togglers.enumerated().forEach {
+            toggleStatus(toggle: $0.element, on: $0.offset == index)
         }
-        toggleStatus(toggle: togglers[index], on: true)
     }
     
-    private func toggleStatus(toggle: Any, on: Bool) {
-        if let _toggle = toggle as? Togglable {
-            _toggle.selectedToggle(select: on)
-        } else {
-            fatalError("Not supported type")
-        }
+    private func toggleStatus(toggle: Togglable, on: Bool) {
+        toggle.selectedToggle(select: on)
     }
 }
