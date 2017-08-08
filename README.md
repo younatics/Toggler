@@ -53,7 +53,7 @@
 #### Use `Toggler`
 ```Swift 
 func buttonClicked(_ sender: UIButton) {
-  toggler.on(index: sender.tag)
+    toggler.on(toggle: sender)
 }
 ```
 ## Requirements
@@ -83,7 +83,7 @@ toggler = Toggler(default: 0, togglers: [button1, button2, button3, button4, but
 
 Toggle button
 ```Swift
-toggler.on(index: 1)
+toggler.on(toggle: sender)
 ```
 
 Add more button
