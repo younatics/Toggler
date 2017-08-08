@@ -33,27 +33,25 @@ public struct Toggler {
         toggleControl(at: index, togglers: togglers)
     }
     
-    open func on(index: Int) {
-        toggleControl(index: index, togglers: togglers)
+    public func on(index: Int) {
+        toggleControl(at: index, togglers: togglers)
     }
     
     public mutating func add(toggle: Togglable) {
         togglers.append(toggle)
     }
     
-    open func remove(at index: Int) {
-        if index <= togglers.count {
-            self.togglers.remove(at: index)
-        } else {
+    public mutating func remove(at index: Int) {
+        guard index <= togglers.count else {
             fatalError("Index is out of array")
         }
+        togglers.remove(at: index)
     }
     
-        for toggle in togglers {
-            toggleStatus(toggle: toggle, on: false)
     private func toggleControl(at index: Int, togglers: [Togglable]) {
+        togglers.enumerated().forEach {
+            toggleStatus(toggle: $0.element, on: $0.offset == index)
         }
-        toggleStatus(toggle: togglers[index], on: true)
     }
     
     private func toggleStatus(toggle: Togglable, on: Bool) {
