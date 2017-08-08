@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1946DAA41F3989FB0077D2FD /* Toggler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19EF94971F370F5D00085BCA /* Toggler.framework */; };
+		1946DAA51F3989FB0077D2FD /* Toggler.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 19EF94971F370F5D00085BCA /* Toggler.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		19EF949C1F370F5D00085BCA /* Toggler.h in Headers */ = {isa = PBXBuildFile; fileRef = 19EF949A1F370F5D00085BCA /* Toggler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		19EF94A91F37100D00085BCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EF94A81F37100D00085BCA /* AppDelegate.swift */; };
 		19EF94AB1F37100D00085BCA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EF94AA1F37100D00085BCA /* ViewController.swift */; };
@@ -16,6 +18,30 @@
 		19EF94BC1F3720EF00085BCA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19EF94BA1F3720EF00085BCA /* LaunchScreen.xib */; };
 		19EF94BE1F37215C00085BCA /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EF94BD1F37215C00085BCA /* Button.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1946DAA61F3989FB0077D2FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19EF948E1F370F5D00085BCA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19EF94961F370F5D00085BCA;
+			remoteInfo = Toggler;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1946DAA81F3989FB0077D2FD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1946DAA51F3989FB0077D2FD /* Toggler.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		19EF94971F370F5D00085BCA /* Toggler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Toggler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1946DAA41F3989FB0077D2FD /* Toggler.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,10 +158,12 @@
 				19EF94A21F37100D00085BCA /* Sources */,
 				19EF94A31F37100D00085BCA /* Frameworks */,
 				19EF94A41F37100D00085BCA /* Resources */,
+				1946DAA81F3989FB0077D2FD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1946DAA71F3989FB0077D2FD /* PBXTargetDependency */,
 			);
 			name = TogglerDemo;
 			productName = TogglerDemo;
@@ -223,6 +252,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1946DAA71F3989FB0077D2FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 19EF94961F370F5D00085BCA /* Toggler */;
+			targetProxy = 1946DAA61F3989FB0077D2FD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		19EF94AC1F37100D00085BCA /* Main.storyboard */ = {
@@ -389,6 +426,7 @@
 		19EF94B51F37100D00085BCA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4G7K3CN2JU;
 				INFOPLIST_FILE = TogglerDemo/Info.plist;
@@ -402,6 +440,7 @@
 		19EF94B61F37100D00085BCA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4G7K3CN2JU;
 				INFOPLIST_FILE = TogglerDemo/Info.plist;
@@ -440,6 +479,7 @@
 				19EF94B61F37100D00085BCA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

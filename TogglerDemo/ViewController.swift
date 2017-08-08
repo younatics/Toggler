@@ -44,11 +44,11 @@ class ViewController: UIViewController {
     }
     
     func buttonClicked(_ sender: UIButton) {
-        toggler.on(button: sender)
+        toggler.on(toggle: sender)
     }
 
     func buttonClicked2(_ sender: UIButton) {
-        toggler2.on(button: sender)
+        toggler2.on(toggle: sender)
     }
 
     override func didReceiveMemoryWarning() {
