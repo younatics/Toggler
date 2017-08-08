@@ -42,7 +42,7 @@ public struct Toggler {
     }
     
     public mutating func remove(at index: Int) {
-        guard index <= togglers.count else {
+        guard index < togglers.count else {
             fatalError("Index is out of array")
         }
         togglers.remove(at: index)
