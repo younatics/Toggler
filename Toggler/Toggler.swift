@@ -25,12 +25,12 @@ extension UISwitch {
     }
 }
 
-open class Toggler: NSObject {
     var togglers = [Any]()
 
     public init(default index: Int, togglers: [Any]) {
         super.init()
         
+public struct Toggler {
         self.togglers = togglers
         toggleControl(index: index, togglers: togglers)
     }
