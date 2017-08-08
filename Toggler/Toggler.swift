@@ -13,15 +13,15 @@ public protocol Togglable: class {
     func selectedToggle(select: Bool)
 }
 
-extension UIButton: Togglable {
+extension UIControl: Togglable {
     public func selectedToggle(select: Bool) {
-        self.isSelected = select
+        isSelected = select
     }
 }
 
-extension UISwitch: Togglable {
-    public func selectedToggle(select: Bool) {
-        self.setOn(select, animated: true)
+extension UISwitch {
+    public override func selectedToggle(select: Bool) {
+        setOn(select, animated: true)
     }
 }
 
