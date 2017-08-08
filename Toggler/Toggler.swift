@@ -25,22 +25,20 @@ extension UISwitch {
     }
 }
 
-    var togglers = [Any]()
-
-    public init(default index: Int, togglers: [Any]) {
-        super.init()
-        
 public struct Toggler {
+    var togglers = [Togglable]()
+    
+    public init(default index: Int = 0, togglers: [Togglable]) {
         self.togglers = togglers
-        toggleControl(index: index, togglers: togglers)
+        toggleControl(at: index, togglers: togglers)
     }
     
     open func on(index: Int) {
         toggleControl(index: index, togglers: togglers)
     }
     
-    open func add(toggle: Any) {
-        self.togglers.append(toggle)
+    public mutating func add(toggle: Togglable) {
+        togglers.append(toggle)
     }
     
     open func remove(at index: Int) {
@@ -51,18 +49,14 @@ public struct Toggler {
         }
     }
     
-    private func toggleControl(index: Int, togglers: [Any]) {
         for toggle in togglers {
             toggleStatus(toggle: toggle, on: false)
+    private func toggleControl(at index: Int, togglers: [Togglable]) {
         }
         toggleStatus(toggle: togglers[index], on: true)
     }
     
-    private func toggleStatus(toggle: Any, on: Bool) {
-        if let _toggle = toggle as? Togglable {
-            _toggle.selectedToggle(select: on)
-        } else {
-            fatalError("Not supported type")
-        }
+    private func toggleStatus(toggle: Togglable, on: Bool) {
+        toggle.selectedToggle(select: on)
     }
 }
