@@ -30,10 +30,19 @@ class ViewController: UIViewController {
         
         toggler = Toggler(default: 0, togglers: [button1, button2, button3, button4, button5])
         button1.addTarget(self, action: #selector(buttonClicked(_:)), for: .touchUpInside)
+        button1.tag = 0
+        
         button2.addTarget(self, action: #selector(buttonClicked(_:)), for: .touchUpInside)
+        button2.tag = 1
+
         button3.addTarget(self, action: #selector(buttonClicked(_:)), for: .touchUpInside)
+        button3.tag = 2
+
         button4.addTarget(self, action: #selector(buttonClicked(_:)), for: .touchUpInside)
+        button4.tag = 3
+
         button5.addTarget(self, action: #selector(buttonClicked(_:)), for: .touchUpInside)
+        button5.tag = 4
         
         toggler2 = Toggler(default: 0, togglers: [button6, button7, button8, button9, button10])
         button6.addTarget(self, action: #selector(buttonClicked2(_:)), for: .touchUpInside)
@@ -44,7 +53,7 @@ class ViewController: UIViewController {
     }
     
     func buttonClicked(_ sender: UIButton) {
-        toggler.on(toggle: sender)
+        toggler.onAt(index: sender.tag)
     }
 
     func buttonClicked2(_ sender: UIButton) {

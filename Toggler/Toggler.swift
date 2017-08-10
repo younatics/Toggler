@@ -37,6 +37,10 @@ public struct Toggler {
         toggleControl(toggle: toggle, togglers: togglers)
     }
     
+    public func onAt(index: Int) {
+        toggleControl(toggle: togglers[index], togglers: togglers)
+    }
+    
     public mutating func add(toggle: Togglable) {
         togglers.append(toggle)
     }

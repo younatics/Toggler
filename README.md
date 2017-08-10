@@ -84,6 +84,7 @@ toggler = Toggler(default: 0, togglers: [button1, button2, button3, button4, but
 Toggle button
 ```Swift
 toggler.on(toggle: sender)
+toggler.onAt(index: sender.tag)
 ```
 
 Add more button
