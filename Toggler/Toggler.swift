@@ -14,7 +14,7 @@ public protocol Togglable: class {
 }
 
 extension UIControl: Togglable {
-    public func selectedToggle(select: Bool) {
+    @objc public func selectedToggle(select: Bool) {
         isSelected = select
     }
 }
