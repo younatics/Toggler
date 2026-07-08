@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public protocol Togglable: class {
+@MainActor public protocol Togglable: AnyObject {
     func selectedToggle(select: Bool)
 }
 
@@ -25,7 +25,7 @@ extension UISwitch {
     }
 }
 
-public struct Toggler {
+@MainActor public struct Toggler {
     var togglers = [Togglable]()
     
     public init(default index: Int = 0, togglers: [Togglable]) {
