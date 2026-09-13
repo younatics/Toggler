@@ -1,9 +1,9 @@
 # Toggler
-[![Version](https://img.shields.io/cocoapods/v/Toggler.svg?style=flat)](http://cocoapods.org/pods/Toggler)
-[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/younatics/Toggler/blob/master/LICENSE)
-[![Platform](https://img.shields.io/cocoapods/p/Toggler.svg?style=flat)](http://cocoapods.org/pods/Toggler)
+[![Swift Package Manager](https://img.shields.io/badge/Swift_Package_Manager-compatible-brightgreen.svg?style=flat)](https://swift.org/package-manager/)
+[![CocoaPods](https://img.shields.io/cocoapods/v/Toggler.svg?style=flat)](https://cocoapods.org/pods/Toggler)
+[![Platform: iOS 13+](https://img.shields.io/badge/platform-iOS%2013%2B-blue.svg?style=flat)](https://developer.apple.com/ios/)
 [![Swift 6.0](https://img.shields.io/badge/Swift-6.0-orange.svg?style=flat)](https://developer.apple.com/swift/)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/younatics/Toggler/blob/master/LICENSE)
 
 ## Intoduction
 💡 don't further use `isSelected` to every button. use `Toggler` to simply control your buttons
@@ -58,7 +58,7 @@ func buttonClicked(_ sender: UIButton) {
 ```
 ## Requirements
 
-`Toggler` is written in Swift 6. Compatible with iOS 13.0+. Supports Swift Package Manager, CocoaPods, and Carthage.
+`Toggler` requires Swift 6.0 and iOS 13.0 or later. It supports Swift Package Manager and CocoaPods.
 
 ## Installation
 
@@ -78,23 +78,19 @@ dependencies: [
 ]
 ```
 
-### Cocoapods
+### CocoaPods
 
-Toggler is available through [CocoaPods](http://cocoapods.org). To install
+Toggler 2.0.0 is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'Toggler'
-```
-### Carthage
-```
-github "younatics/Toggler"
+pod 'Toggler', '2.0.0'
 ```
 
 ## Usage
-Init with `UIButton` or `UISwtich` and default index
+Init with `UIButton` or `UISwitch` controls and a default index
 ```Swift 
-toggler = Toggler(default: 0, togglers: [button1, button2, button3, button4, button5])
+var toggler = Toggler(default: 0, togglers: [button1, button2, button3, button4, button5])
 ```
 
 Toggle button
